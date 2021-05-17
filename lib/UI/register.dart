@@ -8,17 +8,17 @@ class Register extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 120,
+              height: 100,
             ),
             Text(
-              'Ош электро',
+              'Ош электро ',
               style: TextStyle(
                 letterSpacing: 3,
-                fontSize: 20,
+                fontSize: 25,
               ),
             ),
             SizedBox(
-              height: 70,
+              height: 60,
             ),
             Text(
               'Кируу',
