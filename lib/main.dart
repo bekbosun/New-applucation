@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/UI/TP_list_user.dart';
+import 'package:flutter_application_new/UI/TPlist.dart';
 import 'package:flutter_application_new/UI/register.dart';
 import 'package:flutter_application_new/UI/search.dart';
 //import 'package:flutter_application_new/UI/splash_screen.dart';
@@ -16,7 +18,7 @@ class OshApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SearchScreen(),
+      home: TPListUserScreen(),
     );
   }
 }
