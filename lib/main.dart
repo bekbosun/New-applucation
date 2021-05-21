@@ -3,6 +3,7 @@ import 'package:flutter_application_new/UI/TP_list_user.dart';
 import 'package:flutter_application_new/UI/TPlist.dart';
 import 'package:flutter_application_new/UI/docss.dart';
 import 'package:flutter_application_new/UI/new_doc.dart';
+import 'package:flutter_application_new/UI/profil.dart';
 import 'package:flutter_application_new/UI/register.dart';
 import 'package:flutter_application_new/UI/search.dart';
 import 'package:flutter_application_new/UI/user_screen.dart';
@@ -21,7 +22,7 @@ class OshApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NewDocScreen(),
+      home: ProfilScreen(),
     );
   }
 }

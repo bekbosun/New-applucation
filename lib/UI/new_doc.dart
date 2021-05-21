@@ -34,7 +34,7 @@ class NewDocScreen extends StatelessWidget {
             ),
             child: TextField(
               //cursorHeight: 50,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.text,
               textInputAction: TextInputAction.send,
               decoration: InputDecoration(
                 hintText: 'ЛИЦОВЫЙ СЧЁТ',
@@ -54,7 +54,7 @@ class NewDocScreen extends StatelessWidget {
             )),
             child: TextField(
               //cursorHeight: 50,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.text,
               textInputAction: TextInputAction.send,
               decoration: InputDecoration(
                 hintText: 'ЖАНЫ ПОКАЗАНИЯ',
@@ -74,7 +74,7 @@ class NewDocScreen extends StatelessWidget {
             )),
             child: TextField(
               //cursorHeight: 50,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.text,
               textInputAction: TextInputAction.send,
               decoration: InputDecoration(
                 hintText: 'ДАТА ПОКАЗАНИЯ:',
@@ -93,7 +93,7 @@ class NewDocScreen extends StatelessWidget {
             )),
             child: TextField(
               //cursorHeight: 50,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: TextInputType.text,
               textInputAction: TextInputAction.send,
               decoration: InputDecoration(
                 hintText: 'КОШУМЧА МААЛЫМАТ',
