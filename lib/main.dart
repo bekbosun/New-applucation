@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_new/UI/TP_list_user.dart';
-import 'package:flutter_application_new/UI/TPlist.dart';
+import 'package:flutter_application_new/UI/tp_list_user.dart';
+import 'package:flutter_application_new/UI/tp_list.dart';
 import 'package:flutter_application_new/UI/docss.dart';
 import 'package:flutter_application_new/UI/new_doc.dart';
 import 'package:flutter_application_new/UI/profil.dart';
@@ -14,7 +14,6 @@ void main() {
 }
 
 class OshApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

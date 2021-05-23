@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/widget/text_button.dart';
+import 'package:flutter_application_new/widget/text_field.dart';
 
 class NewDocScreen extends StatelessWidget {
   //const NewDocScreen({Key key}) : super(key: key);
@@ -21,86 +23,10 @@ class NewDocScreen extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          Container(
-            height: 60,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            // height: 100,
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black,
-                width: 3,
-              ),
-            ),
-            child: TextField(
-              //cursorHeight: 50,
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.send,
-              decoration: InputDecoration(
-                hintText: 'ЛИЦОВЫЙ СЧЁТ',
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          Container(
-            height: 60,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            // height: 100,
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Colors.black,
-              width: 3,
-            )),
-            child: TextField(
-              //cursorHeight: 50,
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.send,
-              decoration: InputDecoration(
-                hintText: 'ЖАНЫ ПОКАЗАНИЯ',
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          Container(
-            height: 60,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            // height: 100,
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Colors.black,
-              width: 3,
-            )),
-            child: TextField(
-              //cursorHeight: 50,
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.send,
-              decoration: InputDecoration(
-                hintText: 'ДАТА ПОКАЗАНИЯ:',
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
-            height: 120,
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Colors.black,
-              width: 3,
-            )),
-            child: TextField(
-              //cursorHeight: 50,
-              keyboardType: TextInputType.text,
-              textInputAction: TextInputAction.send,
-              decoration: InputDecoration(
-                hintText: 'КОШУМЧА МААЛЫМАТ',
-                border: InputBorder.none,
-              ),
-            ),
-          ),
+          containerTextField('ЛИЦКВОЙ СЧЁТ', TextInputType.number, 60),
+          containerTextField('ЖАНЫ ПОКАЗАНИЯ', TextInputType.text, 60),
+          containerTextField('ДАТА ПОКАЗАНИЯ', TextInputType.datetime, 60),
+          containerTextField('КОШУМЧА МААЛЫМАТ', TextInputType.datetime, 120),
           SizedBox(
             height: 5,
           ),
@@ -118,52 +44,13 @@ class NewDocScreen extends StatelessWidget {
             height: 25,
           ),
           Row(
-            //crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black),
-                ),
-                onPressed: () {},
-                child: SizedBox(
-                  width: 120,
-                  height: 32,
-                  child: Center(
-                    child: Text(
-                      'кайтуу',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              textButtons(Colors.black, 'кайтуу', 32, 120),
               SizedBox(
                 width: 60,
               ),
-              TextButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                ),
-                onPressed: () {},
-                child: SizedBox(
-                  width: 120,
-                  height: 32,
-                  child: Center(
-                    child: Text(
-                      'сактоо',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              textButtons(Colors.blueAccent, 'сактоо', 32, 120),
             ],
           )
         ],

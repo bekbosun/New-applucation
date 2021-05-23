@@ -15,7 +15,9 @@ class TPListUserScreen extends StatelessWidget {
             Center(
               child: Text(
                 'Абоненттердин тизмеси ТП №2586',
-                style: TextStyle(fontSize: 22),
+                style: TextStyle(
+                  fontSize: 22,
+                ),
               ),
             ),
           ],

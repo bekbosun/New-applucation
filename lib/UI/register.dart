@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/widget/text_button.dart';
+import 'package:flutter_application_new/widget/text_field.dart';
 
 class Register extends StatelessWidget {
   @override
@@ -6,15 +8,18 @@ class Register extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 100,
             ),
-            Text(
-              'Ош электро ',
-              style: TextStyle(
-                letterSpacing: 3,
-                fontSize: 25,
+            Center(
+              child: Text(
+                'Ош электро ',
+                style: TextStyle(
+                  letterSpacing: 3,
+                  fontSize: 25,
+                ),
               ),
             ),
             SizedBox(
@@ -30,52 +35,31 @@ class Register extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 10, left: 10),
-              child: TextField(
-                keyboardType: TextInputType.emailAddress,
-                textInputAction: TextInputAction.send,
-                decoration: InputDecoration(
-                  hintText: 'Email',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-            ),
+            Container(
+                height: 60,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                  color: Colors.black,
+                  width: 3,
+                )),
+                child: textField('Email', TextInputType.emailAddress)),
             SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 10, left: 10),
-              child: TextField(
-                keyboardType: TextInputType.text,
-                textInputAction: TextInputAction.send,
-                decoration: InputDecoration(
-                  hintText: 'Сыр соз',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            TextButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blue),
-              ),
-              onPressed: () {},
-              child: SizedBox(
-                width: 320,
-                child: Center(
-                  child: Text(
-                    'Кируу',
-                    style: TextStyle(
-                      color: Colors.white,
-                      backgroundColor: Colors.blue,
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-              ),
+            Container(
+                height: 60,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                  color: Colors.black,
+                  width: 3,
+                )),
+                child: textField('Сыр соз', TextInputType.text)),
+            Center(
+              child: onTextButtons(),
             ),
           ],
         ),

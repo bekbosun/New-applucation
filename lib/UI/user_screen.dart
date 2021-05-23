@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_new/widget/text.dart';
 
 class UserScreen extends StatelessWidget {
   // const UserScreen({Key key}) : super(key: key);
@@ -13,23 +14,11 @@ class UserScreen extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            Text(
-              ' Абоненттердин:',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            textWidgets2(' Абоненттердин:', 25, FontWeight.bold),
             SizedBox(
               height: 5,
             ),
-            Text(
-              '  from 99',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black38,
-              ),
-            ),
+            textWidgets3('  from 99', 20, Colors.black38),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Card(
@@ -38,88 +27,36 @@ class UserScreen extends StatelessWidget {
                   height: 500,
                   width: 380,
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      textWidgets2(
                         'г.Ош ул.',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                        ),
+                        30,
+                        FontWeight.bold,
                       ),
                       SizedBox(
                         height: 5,
                       ),
-                      Text(
-                        '558 KGS',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue,
-                        ),
-                      ),
+                      textWidgets4('558 KGS', 30, FontWeight.bold, Colors.blue),
                       ListTile(
                         leading: CircleAvatar(),
-                        title: Text(
-                          'Петрова Светлана',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25,
-                          ),
-                        ),
-                        subtitle: Text(
-                          'л.счёт:',
-                          style: TextStyle(
-                            color: Colors.black38,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        title: textWidgets2(
+                            'Петрова Светлана', 25, FontWeight.bold),
+                        subtitle: textWidgets4(
+                            'л.счёт:', 23, FontWeight.bold, Colors.black38),
                       ),
-                      Text(
-                        "Показания:",
-                        style: TextStyle(
-                          color: Colors.black38,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "ТП:",
-                        style: TextStyle(
-                          color: Colors.black38,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "Тариф:",
-                        style: TextStyle(
-                          color: Colors.black38,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "За 1с КВТЧ:",
-                        style: TextStyle(
-                          color: Colors.black38,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      textWidgets4(
+                          "Показания:", 30, FontWeight.bold, Colors.black38),
+                      textWidgets4("ТП:", 30, FontWeight.bold, Colors.black38),
+                      textWidgets4(
+                          'Тариф:', 30, FontWeight.bold, Colors.black38),
+                      textWidgets4(
+                          "За 1с КВТЧ:", 30, FontWeight.bold, Colors.black38),
                       SizedBox(
                         height: 7,
                       ),
-                      Text(
-                        'Координаты:',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue,
-                        ),
-                      ),
+                      textWidgets4(
+                          'Координаты', 20, FontWeight.bold, Colors.blue),
                       Row(
                         children: [
                           Text('долгата:'),
@@ -152,16 +89,12 @@ class UserScreen extends StatelessWidget {
                             height: 32,
                             width: 320,
                             child: Center(
-                              child: Text(
-                                'Жаны документтер',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  backgroundColor: Colors.blue,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                                child: textWidgets1(
+                                    'Жаны документтер',
+                                    Colors.white,
+                                    20,
+                                    FontWeight.bold,
+                                    Colors.blue)),
                           ),
                         ),
                       ),
@@ -180,16 +113,8 @@ class UserScreen extends StatelessWidget {
                   width: 320,
                   height: 32,
                   child: Center(
-                    child: Text(
-                      'Жаны документтер',
-                      style: TextStyle(
-                        color: Colors.white,
-                        backgroundColor: Colors.red,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
+                      child: textWidgets1('Жаны документтер', Colors.white, 20,
+                          FontWeight.bold, Colors.red)),
                 ),
               ),
             )

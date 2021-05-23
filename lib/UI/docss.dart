@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class DocssScreen extends StatelessWidget {
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,13 +16,23 @@ class DocssScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ListTile(
-            subtitle: Text('лицевой счёт: \n отправлено на сервер: '),
-            leading: CircleAvatar(),
-            title: Text(
-              'петров',
-              style: TextStyle(
-                fontSize: 25,
+          Card(
+            child: ListTile(
+              subtitle: Text(
+                'лицевой счёт: \n отправлено на сервер: ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              leading: CircleAvatar(
+                radius: 30,
+              ),
+              title: Text(
+                'петров',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
               ),
             ),
           ),
